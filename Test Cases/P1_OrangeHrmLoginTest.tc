@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>User login by entering username and password</description>
+   <name>P1_OrangeHrmLoginTest</name>
+   <tag>@LoginTest</tag>
+   <comment></comment>
+   <origin>WEB_RECORDER</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>837f332d-d6a7-4320-8743-e2c515e34d56</testCaseGuid>
+</TestCaseEntity>

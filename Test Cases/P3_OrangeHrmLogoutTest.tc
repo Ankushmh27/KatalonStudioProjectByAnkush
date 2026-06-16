@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>After clicking on logout button user is logout</description>
+   <name>P3_OrangeHrmLogoutTest</name>
+   <tag>@logoutTest</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e82b42f0-9e48-4a8c-b7ef-8bd9e010819c</testCaseGuid>
+</TestCaseEntity>
