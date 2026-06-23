@@ -17,23 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/a_Admin'))
+WebUI.openBrowser(GlobalVariable.QA)
 
-WebUI.setText(findTestObject('AdminRecordFilter_OrangeHRM/input_oxd-input oxd-input-active'), 'Admin')
+WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/div_Select'))
+WebUI.switchToWindowTitle('OrangeHRM')
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/div_Admin'))
+WebUI.setText(findTestObject('LoginPage_Object/input_Username'), 'Admin')
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/input_Type for hints'))
+WebUI.setEncryptedText(findTestObject('LoginPage_Object/input_Password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/i_oxd-icon bi-caret-down-fill oxd-select-text-ar'))
+WebUI.click(findTestObject('LoginPage_Object/button_Login'))
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/div_Admin'))
+String actualTitle = WebUI.getWindowTitle()
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/button_Search'))
+String expectedTitle = 'OrangeHRM'
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/div_AdminAdminRosh wuuEnabled'))
+println('Actual Page Title: ' + actualTitle)
 
-WebUI.click(findTestObject('AdminRecordFilter_OrangeHRM/div_Admin_1'))
+WebUI.verifyMatch(actualTitle, expectedTitle, false)
 
+//WebUI.verifyMatch(CustomKeywords.'utility.CommanUtility.verifyText'(findTestObject, actualTitle), expectedTitle, false)

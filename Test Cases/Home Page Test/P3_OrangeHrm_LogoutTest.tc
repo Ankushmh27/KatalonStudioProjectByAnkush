@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>After clicking on logout button user is logout</description>
-   <name>P3_OrangeHrmLogoutTest</name>
+   <name>P3_OrangeHrm_LogoutTest</name>
    <tag>@logoutTest</tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>

@@ -17,19 +17,32 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+WebUI.openBrowser(GlobalVariable.QA)
 
-WebUI.switchToWindowTitle('OrangeHRM')
+WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('LoginPage_OrangeHRM/input_Username'), 'Admin')
+WebUI.setText(findTestObject('InvalidLogin_Object/input_Username'), 'Admin')
 
-WebUI.setEncryptedText(findTestObject('LoginPage_OrangeHRM/input_Password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
+WebUI.setEncryptedText(findTestObject('InvalidLogin_Object/input_Password'), '/5S6MFFLcE4mlsixtc6/Tg==')
 
-WebUI.click(findTestObject('LoginPage_OrangeHRM/button_Login'))
+WebUI.click(findTestObject('InvalidLogin_Object/button_Login'))
 
-String actualTitle = WebUI.getWindowTitle()
-String expectedTitle = "OrangeHRM"
+// Wait for the error message
+WebUI.waitForElementVisible(findTestObject('InvalidLogin_Object/div_Invalid credentials'), 10)
 
-println("Actual Page Title: " + actualTitle)
+// Capture the error message
+String actualError = WebUI.getText(findTestObject('InvalidLogin_Object/div_Invalid credentials'))
 
-WebUI.verifyMatch(actualTitle, expectedTitle, false)
+String expectedError = 'Invalid credentials'
+
+// Print the error message
+println('Error Message: ' + actualError)
+
+// Validate the error message
+WebUI.verifyMatch(actualError, expectedError, false)
+
+println('PASS: Invalid credentials! User is not logged in.')
+
+// Close browser
+WebUI.closeBrowser()
+

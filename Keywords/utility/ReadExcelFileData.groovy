@@ -1,4 +1,4 @@
-package utils
+package utility
 
 String filePath = "C:/Users/admin/Katalon Studio/KatalonWebautomationByAnkush/Data Files/LoginTestData.xlsx"
 

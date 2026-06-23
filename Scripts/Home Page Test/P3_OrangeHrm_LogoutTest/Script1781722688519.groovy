@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('LogoutPage_OrangeHrm/i_oxd-icon bi-caret-down-fill oxd-userdropdown-i'))
+WebUI.click(findTestObject('LogoutPage_Object/i_oxd-icon bi-caret-down-fill oxd-userdropdown-i'))
 
-WebUI.click(findTestObject('LogoutPage_OrangeHrm/a_Logout'))
+WebUI.click(findTestObject('LogoutPage_Object/a_Logout'))
 

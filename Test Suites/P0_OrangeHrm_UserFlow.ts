@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>login and logout</description>
-   <name>P1_OrangeHrmUserFlow</name>
+   <name>P0_OrangeHrm_UserFlow</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -15,14 +15,21 @@
       <guid>3dd1192b-856c-4659-a54c-9985fab526b4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/P1_OrangeHrmLoginTest</testCaseId>
+      <testCaseId>Test Cases/Login Page Test/P1_OrangeHrm_LoginTest</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3fca65f9-c319-4775-b403-26e4698c4358</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Home Page Test/P2_OrangeHrm_AdminFilterTest</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>b6fa861b-67e9-4a42-95a7-d304d2a93898</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/P3_OrangeHrmLogoutTest</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Home Page Test/P3_OrangeHrm_LogoutTest</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
