@@ -27,7 +27,7 @@ WebUI.setText(findTestObject('LoginPage_Object/input_Username'), 'Admin')
 
 WebUI.setEncryptedText(findTestObject('LoginPage_Object/input_Password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
 
-WebUI.click(findTestObject('LoginPage_Object/button_Login'))
+WebUI.enhancedClick(findTestObject('LoginPage_Object/button_Login'))
 
 String actualTitle = WebUI.getWindowTitle()
 
